@@ -1,0 +1,20 @@
+# Configuración para Scene Switcher de SLOBS
+# Creado: 28/04/2025
+
+# Ruta del pipe para comunicación con SLOBS
+pipe_name: \\.\pipe\slobs
+
+# Procesos a monitorear
+# Formato: "nombre_ejecutable.exe": ["escena_cuando_activo", "escena_cuando_inactivo"]
+processes:
+  "League of Legends.exe": ["In game", "Fuera de juego"]
+  # Puedes añadir más procesos según necesites:
+  # "valorant.exe": ["Jugando Valorant", "Fuera de juego"]
+  # "discord.exe": ["Discord", "Desktop"]
+
+# Intervalo de verificación en segundos
+check_interval: 1
+
+# Configuración de reconexión
+reconnect_attempts: 5  # Máximo número de intentos antes de esperar
+reconnect_delay: 2     # Segundos base entre intentos (aumenta con cada fallo)
